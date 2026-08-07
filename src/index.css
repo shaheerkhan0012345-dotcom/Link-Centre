@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-dark: #13101c;
+    --bg-light: #e0cef8;
+    --primary: #6366f1;
+    --secondary: #8b5cf6;
+    --accent: #a855f7;
+    --card-dark: #1a1a24;
+    --card-light: #ffffff;
+  }
+
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.2);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.4);
+}
+
+/* Glassmorphism effects without borders */
+.glass-panel-dark {
+  background: #1a1a24;
+  border: none;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.glass-panel-light {
+  background: #ffffff;
+  border: none;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+}
+
+/* Purple Glow Animation */
+@keyframes purpleGlowPulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.08);
+  }
+}
+
+.animate-purple-glow {
+  animation: purpleGlowPulse 6s ease-in-out infinite;
+}
+
+/* Float particles animation */
+@keyframes floatParticle {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(360deg);
+  }
+}
+
+.animate-float {
+  animation: floatParticle 12s ease-in-out infinite;
+}
+
+/* Shiny gradient text */
+.gradient-text-purple {
+  background: linear-gradient(135deg, #FAF8FF 0%, #A855F7 50%, #E9D5FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-purple-dark {
+  background: linear-gradient(135deg, #5B21B6 0%, #A855F7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

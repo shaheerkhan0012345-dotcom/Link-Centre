@@ -1,0 +1,6 @@
+{
+  "name": "Link Center",
+  "description": "Modern, premium link-in-bio & resource hub for AI creators and developers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
